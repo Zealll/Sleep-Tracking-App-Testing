@@ -44,6 +44,7 @@ router.post('/login', (req, res) => {
     .catch(error => res.status(500).json(error))
 })
 
+//LOGOUT endpoint
 router.get('/logout', (req, res) => {
     if(req.session) {
         req.session.destroy(error => {
