@@ -11,10 +11,22 @@ const helpers = require('./helper.js')
 router.get('/', restricted, (req, res) => {
     // ONLY the user that matches the token is being returned
     const id = req.decodedJWT.subject
+
+    // helpers
+    // .get()
+    // .then(users => {
+    //     if(!users){
+    //         res.status(404).send('User Doesn\'t Exist!')
+    //     } else {
+    //         res.json(users)
+    //     }
+        
+    // })
+    // .catch(error => res.status(500).json(error))
     
     db('users as u')
     .where('u.id', id)
-    .first()
+    // .first()
     .then(users => {
         if(!users){
             res.status(404).send('User Doesn\'t Exist!')
