@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 import { Link, withRouter } from 'react-router-dom'
-
+import axiosConfig from './axiosConfig.js'
 import { apiUri } from './globalVariables.js'
 // import axiosConfig from './axiosConfig.js'
 
@@ -40,13 +40,13 @@ class Login extends React.Component {
                 <form onSubmit={this.submit}>
                     <div className='credentials'>Type Your Credentials!</div>
                     <input 
-                      placeholder='e-mail'
+                      placeholder='E-mail'
                       value={this.state.email}
                       name='email'
                       onChange={this.changeInput}
                     /> 
                     <input 
-                      placeholder='password'
+                      placeholder='Password'
                       value={this.state.password}
                       name='password'
                       onChange={this.changeInput}

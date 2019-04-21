@@ -54,6 +54,13 @@
   margin-bottom: 10px;
 }
 
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 button {
   position: relative;
   display: inline-block;

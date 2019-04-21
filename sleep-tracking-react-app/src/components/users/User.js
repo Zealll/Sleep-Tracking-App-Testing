@@ -16,7 +16,7 @@ class User extends React.Component {
 
     componentDidMount() {
         axios
-        .get(`${apiUri}/users`, axiosConfig)
+        .get(`${apiUri}/users`, axiosConfig, this.state)
         .then(response => this.setState({user: response.data}))
         .catch(error => this.setState({error: error}))
     }
@@ -28,6 +28,7 @@ class User extends React.Component {
                 {this.state.user.map(user => (
                     <div key={user.id}>
                         {user.name}
+                        &nbsp;  &nbsp;
                         {user.email}
                     </div>
                 ))}
