@@ -30,6 +30,15 @@ class User extends React.Component {
                         {user.name}
                         &nbsp;  &nbsp;
                         {user.email}
+                        {user.data.map(data => (
+                            <div>
+                                {data.moodBefore}
+                                &nbsp;  &nbsp;
+                                {data.sleepDate}
+                                &nbsp;  &nbsp;
+                                {data.moodDuring}
+                            </div>
+                        ))}
                     </div>
                 ))}
             </div>

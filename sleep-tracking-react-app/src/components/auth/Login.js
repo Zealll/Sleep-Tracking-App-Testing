@@ -24,7 +24,7 @@ class Login extends React.Component {
         e.preventDefault()
 
         axios
-        .post(`${apiUri}/auth/login`, this.state)
+        .post(`${apiUri}/auth/login`, this.state, axiosConfig)
         .then(res => {
             localStorage.setItem('token', res.data.token)
             this.props.history.push('/users')
